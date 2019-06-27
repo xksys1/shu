@@ -1,0 +1,17 @@
+{
+    "name":"YinZei",
+    "summary":"The File Is HouMo shuyuan",
+    "list":[
+        {
+    "name":"无错小说网",
+    "version":100,
+    "category":0,
+    "url":"https://www.quledu.net/",
+    "charset":"uft-8",
+    "search":{
+        "link":"https://www.quledu.net/search/result.html?searchtype=novelname&searchkey=${key}",
+        "list":".novelslist2"
+    }
+}
+    ]
+}
