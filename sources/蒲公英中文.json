@@ -1,0 +1,34 @@
+{
+  "name": "蒲公英中文",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.pgyzw.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["td.odd:has(a)"],
+    "author": ["td.odd:nth-child(3)"],
+    "cover": [],
+    "summary": ["tbody > tr > td > div > p"],
+    "category": [],
+	  "status":[],
+    "update": ["td.odd:nth-child(5)"],
+	  "lastChapter":["td.even:not(a):nth-child(2)"],
+    "link": ["td.odd > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "tbody > tr > td.ccss > a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#content"
+  },
+  "search": {
+    "link": "http://www.pgyzw.com/modules/article/search.php@post->searchkey=${key}",
+    "list": "tbody>tr:gt(0)"
+  }
+}

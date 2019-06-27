@@ -1,0 +1,34 @@
+{
+  "name": "二三小说",
+  "version": 100,
+  "category": 1,
+  "url": "http://kig.two3.cn",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["a.bookname"],
+    "author": ["p>a.author"],
+    "cover": ["a>img@attr->src"],
+    "summary": ["p.intro"],
+    "category": ["p>a:nth-child(3)"],
+	"status":["span.layui-badge"],
+    "update": [],
+	"lastChapter":["a.chapter"],
+    "link": ["a.bookname@attr->href"],
+    "catalog": ["p.action>a:nth-child(4)@attr->href"]
+  },
+  "catalog": {
+    "list": "dl:nth-child(2)>dd>a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a@js->${this}.match('(.*)更新：')[1]",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#content"
+  },
+  "search": {
+    "link": "http://kig.two3.cn/so/search.html?searchkey=${key}",
+    "list": "ul.library>li"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "速越阁",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.suyuege.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["td:nth-child(1)"],
+    "author": ["td.odd:nth-child(3)"],
+    "cover": ["meta[property=og:image]@attr->content"],
+    "summary": ["meta[property=og:description]@attr->content"],
+    "category": [],
+	  "status":["td:nth-child(6)"],
+    "update": ["td:nth-child(5)"],
+	  "lastChapter":["td:nth-child(2)"],
+    "link": ["td:nth-child(1) > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "div.ml_list>ul>li>a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "p.articlecontent"
+  },
+  "search": {
+    "link": "http://www.suyuege.com/modules/article/mbugidvya.php?searchkey=${key}&page=",
+    "list": "tbody>tr:gt(0)",
+  }
+}

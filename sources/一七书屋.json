@@ -1,0 +1,35 @@
+{
+  "name": "一七书屋",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.17shuwu.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["h3 > a"],
+    "author": [".item-pic > p > i:nth-child(1)"],
+    "cover": [".item-pic > a > img@attr->src"],
+    "summary": [".item-pic > p:nth-child(5)"],
+    "category": [],
+	  "status":[".item-pic > p:nth-child(3n) > i:nth-child(2)"],
+    "update": [".item-pic > p:nth-child(2n) > i:nth-child(2)"],
+	  "lastChapter":[".item-pic > p > a"],
+    "link": [".item-pic>h3 > a@attr->href"],
+    "catalog": [".book-link > a.b-orange:lt(2)@attr->href"]
+  },
+  "catalog": {
+    "list": "dl.chapterlist > dd > a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#BookText",
+	"filter":["@p"]
+  },
+  "search": {
+    "link": "http://www.17shuwu.com/modules/article/search.php?searchkey=${key}",
+    "list": "div.item-pic"
+  }
+}

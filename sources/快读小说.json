@@ -1,0 +1,79 @@
+{
+  "name": "快读小说",
+  "version": 103,
+  "category": 3,
+  "url": "http://api.gdugm.cn",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.author"],
+    "cover": ["$.cover"],
+    "summary": ["$.longIntro"],
+    "category": ["$.cat"],
+	  "status":[],
+    "update": ["$.chaptersUpdated"],
+	  "lastChapter":["$.lastChapter"],
+    "link": ["$._id@js->'http://api.gdugm.cn/toc/mix?&bookId='+${this}"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "$.chapters",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.title",
+      "link": "$.link@js->'http://chapter.gdugm.cn/chapter/' + encodeURIComponent(${this})"
+    }
+  },
+  "content": {
+    "text": "$.chapter.body"
+  },
+  "search": {
+    "link": "http://api.gdugm.cn/book/search?key=${key}&start=0&limit=100",
+    "list": "$.books"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "完结榜单",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-male-finish-month"
+      },
+      {
+        "name": "热搜榜单",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-male-hotsearch-month"
+      },
+      {
+        "name": "潜力榜单",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-male-potenial-month"
+      },
+      {
+        "name": "传记名著",
+        "link": "http://api.gdugm.cn/book/list?gender=press&type=2&major=传记名著&start=0&limit=50"
+      },
+      {
+        "name": "出版小说",
+        "link": "http://api.gdugm.cn/book/list?gender=press&type=2&major=出版小说&start=0&limit=50"
+      },
+      {
+        "name": "经管理财",
+        "link": "http://api.gdugm.cn/book/list?gender=press&type=2&major=经管理财&start=0&limit=50"
+      },
+      {
+        "name": "青春言情",
+        "link": "http://api.gdugm.cn/book/list?gender=press&type=2&major=青春言情&start=0&limit=50"
+      },
+      {
+        "name": "政治军事",
+        "link": "http://api.gdugm.cn/book/list?gender=press&type=2&major=政治军事&start=0&limit=50"
+      },
+      {
+        "name": "成功励志",
+        "link": "http://api.gdugm.cn/book/list?gender=press&type=2&major=成功励志&start=0&limit=50"
+      },
+      {
+        "name": "轻小说",
+        "link": "http://api.gdugm.cn/book/list?gender=male&type=2&major=%E8%BD%BB%E5%B0%8F%E8%AF%B4&start=0&limit=50"
+      }
+    ],
+    "list": "$.books[*]"
+  }
+}

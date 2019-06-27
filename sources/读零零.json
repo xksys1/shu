@@ -1,0 +1,35 @@
+{
+  "name": "读零零",
+  "version": 100,
+  "category": 1,
+  "url": "https://www.du00.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["td:nth-child(1)"],
+    "author": ["td:nth-child(3)"],
+    "cover": ["div.pic>img@attr->src"],
+    "summary": [],
+    "category": [],
+	"status":["td:nth-child(6)"],
+    "update": ["td:nth-child(5)"],
+	"lastChapter":["td:nth-child(2)"],
+    "link": ["td:nth-child(1)>a@attr->href"],
+    "catalog": ["span.btopt>a@attr->href"]
+  },
+  "catalog": {
+    "list": "div#list>dl>dd>a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#pagecontent",
+	"filter":["@font"]
+  },
+  "search": {
+    "link": "https://www.du00.com/modules/article/search.php?searchkey=${key}",
+    "list": "tbody>tr:gt(0)"
+  }
+}

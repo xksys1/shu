@@ -1,0 +1,34 @@
+{
+  "name": "读一读",
+  "version": 100,
+  "category": 1,
+  "url": "http://duyidu.net",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["div.col-xs-3"],
+    "author": ["div:nth-child(4)"],
+    "cover": ["div.col-xs-2 > img@attr->src"],
+    "summary": ["p#all"],
+    "category": ["div.col-xs-1"],
+	"status":[],
+    "update": ["span.time"],
+	"lastChapter":["div.col-xs-4"],
+    "link": ["div.col-xs-3 > a@attr->href"],
+    "catalog": ["li.list-group-item:gt(5) > a@attr->href"]
+  },
+  "catalog": {
+    "list": "#chapters-list > li:has(a)",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#txtContent"
+  },
+  "search": {
+    "link": "http://duyidu.net/search.htm?keyword=${key}",
+    "list": "#novel-list > ul > li:gt(0)"
+  }
+}

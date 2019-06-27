@@ -1,0 +1,34 @@
+{
+  "name": "斋书苑",
+  "version": 102,
+  "category": 1,
+  "url": "https://www.zhaishuyuan.com",
+  "charset": "gb2312",
+  "metadata": {
+    "name": ["dd > h3 > a"],
+    "author": ["dd.book_other > span:nth-child(1)"],
+    "cover": ["dt > a > img@attr->_src"],
+    "summary": ["dd.book_des"],
+    "category": ["dd.book_other > span:nth-child(3)"],
+    "status": ["div.count > ul > li:nth-child(2) > span"],
+    "update": ["div.new > span.uptime > span"],
+    "lastChapter": ["#newlist > ul > li:nth-child(1) > a"],
+    "link": ["dt > a@attr->href"],
+    "catalog": ["div.motion > a@attr->href"]
+  },
+  "catalog": {
+    "list": "#readerlists > ul > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#content > p:gt(1)"
+  },
+  "search": {
+    "link": "https://www.zhaishuyuan.com/search/@post->s=${key}",
+    "list": "#sitembox > dl"
+  }
+}

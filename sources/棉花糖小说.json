@@ -1,0 +1,35 @@
+{
+  "name": "棉花糖小说",
+  "version": 101,
+  "category": 1,
+  "url": "http://www.mianhuatang2.com",
+  "charset": "gb2312",
+  "metadata": {
+    "name": ["span.s2"],
+    "author": ["span.s4"],
+    "cover": [],
+    "summary": ["#intro"],
+    "category": ["span.s1"],
+	  "status":[],
+    "update": [],
+	  "lastChapter":["span.s3"],
+    "link": ["span.s2 > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "#list > dl >dd > a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#zjneirong",
+    "filter":["@p#xuanchuan"]
+  },
+  "search": {
+    "link": "http://www.mianhuatang2.com/search.aspx?bookname=${key}",
+    "list": ".l > ul >li"
+  }
+}

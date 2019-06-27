@@ -1,0 +1,34 @@
+{
+  "name": "就爱谈小说",
+  "version": 100,
+  "category": 1,
+  "url": "https://www.9itan.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["td:nth-child(1)"],
+    "author": ["td:nth-child(3)"],
+    "cover": ["div.pic>img@attr->src"],
+    "summary": ["p.jj"],
+    "category": [],
+	  "status":["td:nth-child(6)"],
+    "update": ["td:nth-child(5)"],
+	  "lastChapter":["td:nth-child(2)"],
+    "link": ["td:nth-child(1)>a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "div.ml_list:gt(0)>ul>li>a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "p.articlecontent"
+  },
+  "search": {
+    "link": "https://www.9itan.com/modules/article/search.php?searchkey=${key}",
+    "list": "tbody>tr:gt(0)"
+  }
+}

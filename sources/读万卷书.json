@@ -1,0 +1,84 @@
+{
+  "name": "读万卷书",
+  "version": 101,
+  "category": 0,
+  "url": "https://www.duwanjuan.cn",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["a"],
+    "author": [],
+    "cover": ["p>img@attr->src"],
+    "summary": ["p:nth-child(2)"],
+    "category": [],
+	  "status":["a@js->'完结'"],
+    "update": [],
+	  "lastChapter":[],
+    "link": ["a@attr->href"],
+    "catalog": ["span.btopt>a@attr->href"]
+  },
+  "catalog": {
+    "list": "div.bd>ul>li>a",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#post_content",
+	"filter":["@div[style=text-align:center]"]
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "读者",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/duzhe"
+      },
+      {
+        "name": "意林",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/yl"
+      },
+      {
+        "name": "故事会",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/gushihui"
+      },
+	  {
+        "name": "新青年",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/xinqingnian"
+      },
+      {
+        "name": "今日文摘",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/jinriwenzhai"
+      },
+      {
+        "name": "读者校园",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/duzhecampus"
+      },
+      {
+        "name": "读者欣赏",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/duzhexinshang"
+      },
+      {
+        "name": "意林少年",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/ylsnb"
+      },
+      {
+        "name": "军事文摘",
+        "link": "https://www.duwanjuan.cn/category/kejikepu/junshiwenzhai"
+      },
+      {
+        "name": "意林绘阅读",
+        "link": "https://www.duwanjuan.cn/category/wenxuewenzhai/ylhyd"
+      },
+      {
+        "name": "中国新闻周刊",
+        "link": "https://www.duwanjuan.cn/category/shishixinwen/zgxwzk"
+      },
+      {
+        "name": "三联生活周刊",
+        "link": "https://www.duwanjuan.cn/category/shishixinwen/slshzk"
+      }
+    ],
+    "list": "td>a"
+  }
+}

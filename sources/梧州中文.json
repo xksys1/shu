@@ -1,0 +1,32 @@
+{
+  "name": "梧州中文",
+  "version": 100,
+  "category": 1,
+  "url": "https:/m.ztv.la",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["div.col-xs-3 > a"],
+    "author": ["div:nth-child(4)"],
+    "cover": ["div.col-xs-2 > img@attr->src"],
+    "summary": ["#all"],
+    "category": ["div.col-xs-1 > i"],
+    "update": ["div:nth-child(5)"],
+    "link": ["div:nth-child(2) > a@attr->href"],
+    "catalog": ["li.list-group-item tac > a@attr->href"]
+  },
+  "catalog": {
+    "list": "#chapters-list > li:has(a)",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#txtContent"
+  },
+  "search": {
+    "link": "https://m.ztv.la/search.htm?keyword=${key}",
+    "list": "ul > li"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "一本读",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.ybdu.me",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["span.s2"],
+    "author": ["span.s4"],
+    "cover": ["#fmimg > img@attr->src"],
+    "summary": ["#intro"],
+    "category": ["span.s1"],
+	  "status":["span.s7"],
+    "update": ["span.s6"],
+	  "lastChapter":["span.s3"],
+    "link": ["span.s2 > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "#list > dl > dd",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#content"
+  },
+  "search": {
+    "link": "http://www.ybdu.me/SearchBook.aspx?keyword=${key}",
+    "list": ".novelslist2 > ul > li:gt(0)"
+  }
+}

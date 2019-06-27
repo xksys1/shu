@@ -1,0 +1,34 @@
+{
+  "name": "全小说",
+  "version": 100,
+  "category": 1,
+  "url": "https://qxs.la",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["li.cc2"],
+    "author": ["li.cc4"],
+    "cover": [],
+    "summary": [".desc"],
+    "category": [".f_l > font"],
+    "update": ["li.cc5"],
+	  "lastChapter":["li.cc3"],
+    "link": ["li.cc2 > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": ".chapter",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#content",
+    "filter": ["@div"]
+  },
+  "search": {
+    "link": "https://qxs.la/s_${key}",
+    "list": ".list_content"
+  }
+}

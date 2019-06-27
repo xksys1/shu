@@ -1,0 +1,58 @@
+{
+  "name": "墨色阅读",
+  "version": 100,
+  "category": 0,
+  "url": "http://api10e46r.zhuishushenqi.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.author"],
+    "cover": ["$.cover@js->'http://statics.zhuishushenqi.com' + ${this}"],
+    "summary": ["$.shortIntro"],
+    "category": ["$.cat", "$.majorCate"],
+    "update": [
+      "$.updated@js->function getTime(str){ var o = ''; var d = new Date(str); o = d.getUTCFullYear()+'-'+(d.getUTCMonth()+1)+'-'+d.getUTCDate()+' '+d.getUTCHours()+':'+d.getUTCMinutes()+':'+d.getUTCSeconds(); return o; } getTime(${this});"
+    ],
+    "lastChapter": ["$.lastChapter"],
+    "link": ["$._id@js->'http://api.zhuishushenqi.com/toc?view=summary&book=' + ${this}"],
+    "catalog": [
+      "$._id@js->'http://api.zhuishushenqi.com/toc/' + ${this} + '?view=chapters'"
+    ]
+  },
+  "catalog": {
+    "list": "$.mixToc.chapters",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.title",
+      "link": "$.link@js->'http://chapter.gdugm.cn/chapter/' + ${this}"
+    }
+  },
+  "content": {
+    "text": "$.*.body"
+  },
+  "search": {
+    "link": "http://api10e46r.zhuishushenqi.com/book/fuzzy-search?query=${key}&version=2&appName=mose",
+    "list": "$.books[?(@.contentType =='txt')]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "传记名著",
+        "link": "http://api10e46r.zhuishushenqi.com/book/by-categories?appName=mose&major=传记名著&gender=press&platform=android&start=0&limit=50"
+      },
+      {
+        "name": "出版小说",
+        "link": "http://api10e46r.zhuishushenqi.com/book/by-categories?appName=mose&major=出版小说&gender=press&platform=android&start=0&limit=50"
+      },
+      {
+        "name": "成功励志",
+        "link": "http://api10e46r.zhuishushenqi.com/book/by-categories?appName=mose&major=成功励志&gender=press&platform=android&start=0&limit=50"
+      },
+      {
+        "name": "人文社科",
+        "link": "http://api10e46r.zhuishushenqi.com/book/by-categories?appName=mose&major=人文社科&gender=press&platform=android&start=0&limit=50"
+      }
+    ],
+    "list": "$.books"
+  }
+}
